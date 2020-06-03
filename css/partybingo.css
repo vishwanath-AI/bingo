@@ -1,0 +1,154 @@
+/**
+ * Fonts
+ */
+
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Roboto+Mono&display=swap');
+
+/**
+ * Common variables
+ */
+
+:root {
+  --base-font: 'Roboto', sans-serif;
+  --monospace-font: 'Roboto Mono', monospace;
+  --primary-color: orange;
+  --secondary-color: lightslategray;
+  --accent-color: orangered;
+  --info-color: skyblue;
+  --inactive-color: gray;
+}
+
+/***
+ * Clear style of button
+ */
+
+button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  padding: 0;
+  appearance: none;
+}
+
+/***
+ * Application styles
+ */
+
+body {
+  background-color: #eeeeee;
+  font-family: var(--base-font);
+}
+
+.app {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.current-number {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: var(--monospace-font);
+  background-color: #ffffff;
+  border-radius: 20px;
+  font-size: 240px;
+  line-height: 1;
+  padding: 12px 36px;
+  color: var(--inactive-color);
+  letter-spacing: 18px;
+  font-weight: 600;
+}
+
+.current-number.active {
+  color: var(--accent-color);
+}
+
+.button-container {
+  margin-top: 20px;
+}
+
+button.spin {
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1;
+  width: 100px;
+  padding: 8px 12px;
+  border-radius: 8px;
+}
+
+button.spin.start {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+button.spin.stop {
+  background-color: var(--info-color);
+  color: white;
+}
+
+.history-container {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  max-width: 800px;
+}
+
+.history {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Roboto Mono', monospace;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 1;
+  background-color: #ffffff;
+  border-radius: 4px;
+  padding: 6px;
+  margin: 3px;
+  color: var(--info-color);
+}
+
+.history.active {
+  color: var(--accent-color);
+}
+
+button.reset {
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1;
+  width: 100px;
+  padding: 8px 12px;
+  border-radius: 8px;
+  background-color: var(--inactive-color);
+  color: white;
+}
+
+button:hover {
+  opacity: 0.7;
+}
+
+.copyright {
+  margin-top: 20px;
+  padding-right: 12px;
+  display: flex;
+  justify-content: flex-end;
+  font-size: 10px;
+  color: var(--inactive-color);
+}
+
+.copyright a {
+  color: var(--inactive-color)
+}
+
+.copyright a:hover {
+  opacity: 0.7;
+}
